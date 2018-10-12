@@ -1,0 +1,35 @@
+{
+    "name": "@inpassor/functions",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": "Oleg V. Kuzmin",
+    "description": "Common functions",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Inpassor/ts-functions"
+    },
+    "bugs": {
+        "url": "https://github.com/Inpassor/ts-functions/issues"
+    },
+    "homepage": "https://github.com/Inpassor/ts-functions",
+    "keywords": [
+        "typescript",
+        "functions"
+    ],
+    "main": "lib/index.js",
+    "scripts": {
+        "lint": "tslint --project tsconfig.json",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "crypto-js": "^3.1.9-1",
+        "webpack": "^4.20.2"
+    },
+    "devDependencies": {
+        "@types/node": "^10.11.7",
+        "ts-loader": "^5.2.1",
+        "tslint": "^5.11.0",
+        "typescript": "2.9.2",
+        "webpack-cli": "^3.1.2"
+    }
+}
