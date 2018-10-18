@@ -1,1 +1,1 @@
-# Common functions
+# Common typescript functions
