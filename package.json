@@ -11,10 +11,13 @@
         "url": "https://github.com/Inpassor/ts-functions/issues"
     },
     "homepage": "https://github.com/Inpassor/ts-functions",
-    "description": "Common typescript functions",
+    "description": "Common functions library",
     "keywords": [
+        "common",
+        "functions",
+        "library",
         "typescript",
-        "functions"
+        "javascript"
     ],
     "main": "lib/index.js",
     "scripts": {
