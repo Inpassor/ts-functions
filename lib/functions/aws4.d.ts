@@ -5,7 +5,7 @@ export declare class AWS4 {
     static algorithm: string;
     static actionName: string;
     static parseAuthorizationHeader(authorizationHeader: string): AWS4AuthHeader;
-    static createAuthorizationHeader(accessKeyId: string, regionName: string, serviceName: string, signedHeaders: string, body: string): string;
+    static createAuthorizationHeader(accessKeyId: string, regionName: string, serviceName: string, signedHeaders: string, body: string, date: Date): string;
     static dateToDateStamp(date: Date): string;
     static dateToAmzDate(date: Date): string;
     static getAmzDate(arg?: IncomingHttpHeaders | Date): string;

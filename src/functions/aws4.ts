@@ -52,8 +52,8 @@ export class AWS4 {
                                             regionName: string,
                                             serviceName: string,
                                             signedHeaders: string,
-                                            body: string): string {
-        const date = new Date();
+                                            body: string,
+                                            date: Date): string {
         const dateStamp = AWS4.dateToDateStamp(date);
         const stringToSign = AWS4.getStringToSign(
             AWS4.dateToAmzDate(date),
