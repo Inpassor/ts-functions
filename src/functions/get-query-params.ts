@@ -4,7 +4,7 @@ import {setTypings} from './set-typings';
 export const getQueryParams = (_href?: string): Data => {
     let href: string;
     if (!_href) {
-        const iframe = <HTMLIFrameElement> window.frameElement;
+        const iframe = window ? <HTMLIFrameElement>window.frameElement : null;
         if (iframe) {
             href = iframe.src;
         } else {
