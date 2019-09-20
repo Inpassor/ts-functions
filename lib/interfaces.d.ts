@@ -15,8 +15,8 @@ export interface AWS4AuthHeader {
     signature?: string;
 }
 export interface WaitForOptions {
-    context: any;
     prop: any;
+    context?: any;
     requiredValue?: any;
     iterationsInterval?: number;
     maxIterations?: number;

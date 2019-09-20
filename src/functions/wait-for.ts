@@ -1,16 +1,20 @@
 import {WaitForOptions} from '../interfaces';
 
-export const waitFor = (options: WaitForOptions): Promise<null> => {
+export const waitFor = (options: WaitForOptions | string): Promise<any> => {
     return new Promise((resolve, reject) => {
-        const iterationsInterval = options.iterationsInterval || 10;
-        const maxIterations = options.maxIterations || 10000;
-        const requiredValue = options.requiredValue;
+        const _options: WaitForOptions = typeof options === 'string' ? {
+            prop: options,
+        } : options;
+        const context = _options.context || window;
+        const iterationsInterval = _options.iterationsInterval || 10;
+        const maxIterations = _options.maxIterations || 10000;
+        const requiredValue = _options.requiredValue;
         let iterations = 0;
         const t = setInterval(() => {
-            const value = options.context[options.prop];
+            const value = _options.context[_options.prop];
             if (requiredValue === undefined ? value : requiredValue === value) {
                 clearInterval(t);
-                resolve();
+                resolve(value);
             } else {
                 iterations++;
                 if (iterations > maxIterations) {
