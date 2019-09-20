@@ -11,7 +11,7 @@ export const waitFor = (options: WaitForOptions | string): Promise<any> => {
         const requiredValue = _options.requiredValue;
         let iterations = 0;
         const t = setInterval(() => {
-            const value = _options.context[_options.prop];
+            const value = context[_options.prop];
             if (requiredValue === undefined ? value : requiredValue === value) {
                 clearInterval(t);
                 resolve(value);
